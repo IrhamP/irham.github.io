@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+  width: 1260px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+  height: 50px;
+}
+
+.active {
+  background-color: #04AA6D;
+  padding: 16px;
+  border-left: 1px solid white ;
+}
+
+/*css Dropdown*/
+
+.dropbtn {
+  background-color:#04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: gray;
+  width: 72px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/* Css layout */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #ccc;
+  padding: 20px;
+}
+
+
+/* Style the content */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+<body>
+
+  <header>
+    <img src="../Web layout/img/low-res-logo (2).png">
+  </header>
+
+<ul>
+  <li style="float:right"><a class="active" href="signup.html">Sign up</a></li>
+  <li style="float:right"><a href="login.html">Login</a></li>
+</ul>
+
+<div class="dropdown">
+  <button class="dropbtn">Menu</button>
+  <div class="dropdown-content">
+  <a href="index.html">Home</a>
+  <a href="#">Galery</a>
+  <a href="#">Artikel</a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Cara Beternak Kenari yang Benar</h2>
+       <img src="../Web layout/img/burung1.jpg" alt="Cinque Terre" width="950px" height="200px" style="object-fit: cover;">
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+
+    <div class="card">
+      <h2>Macam-macam Burung Kenari</h2>
+      <img src="../Web layout/img/burung2.jpg" alt="Cinque Terre" width="950px" height="200px" style="object-fit: cover;">
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <img src="../Web layout/img/low-res-logo (2).png" height="90px" width="250px" style="object-fit: contain;">
+      <p>IR Bird Farm adalah perusahaan yang berfokus kepada pembudidayaan burung berjenis finch</p>
+    </div>
+
+    <div class="card">
+      <h3>Popular Post</h3>
+      <img src="../Web layout/img/burung1.jpg" height="50px" width="250px" style="object-fit: cover;">
+      <img src="../Web layout/img/burung2.jpg" height="50px" width="250px" style="object-fit: cover;">
+      <img src="../Web layout/img/burung3.jpg" height="50px" width="250px" style="object-fit: cover;">
+    </div>
+
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>

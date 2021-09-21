@@ -7,12 +7,34 @@
    
     <body>
         <div class="container">
-          <h1>Sign Up</h1>
+          
             <form>
-                <label>Email</label><br>
-                <input type="text"><br>
+               
                 <label>Username</label><br>
                 <input type="text"><br>
+                <label> Tempat Lahir</label>
+                <input list="kotalahir">
+                <datalist id="kotalahir">
+                <option value="Kab Madiun">
+                <option value="Kab Ponorogo">
+                <option value="Madiun Kota">
+                <option value="Mejayan">
+                </datalist> <br> <br>
+
+                <label> Tanggal Lahir </label>
+                <input type="date"> <br> <br>
+
+
+                <label>Jenis Kelamin</label>
+                <input list="jeniskelamin">
+                <datalist id="jeniskelamin">
+                <option value="Laki Laki">
+                <option value="Perempuan">
+                </datalist>
+
+                <label>Hobby</label><br>
+                <input type="text"><br>
+
                 <label>Password</label><br>
                 <input type="password"><br>
                 <button>Sign Up</button>
